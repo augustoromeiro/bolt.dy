@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ ! -f .env.local ]; then
+  echo ""
+  exit 0
+fi
+
 bindings=""
 
 while IFS= read -r line || [ -n "$line" ]; do
